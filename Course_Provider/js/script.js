@@ -1,26 +1,23 @@
-let buttons = document.querySelector('.button');
-let btn = document.querySelectorAll('span');
-let value = document.getElementById('value');
 let togglebtn = document.querySelector('.togglebtn');
 let body = document.querySelector('body');
+const header = document.querySelector("header");
 
-for(let i=0; i<btn.length; i++){
-    btn[i].addEventListener("click", function(){
+window.addEventListener ("scroll", function() {
+	header.classList.toggle ("sticky", window.scrollY > 0);
+});
 
-        if(this.innerHTML=="="){
-            value.innerHTML = eval(value.innerHTML);
-        }
-        else{
-            if(this.innerHTML == "AC"){
-                value.innerHTML = "0"
-            }
-            else{
-                value.innerHTML += this.innerHTML;
-            }
-        }
+let menu =  document.querySelector('#menu-icon');
+let navbar =  document.querySelector('.navbar');
 
-    })
-}
+menu.onclick = () => {
+	menu.classList.toggle('bx-x');
+	navbar.classList.toggle('open');
+};
+
+window.onscroll = () => {
+	menu.classList.remove('bx-x');
+	navbar.classList.remove('open');
+};
 
 togglebtn.onclick = function(){
     body.classList.toggle('dark');
