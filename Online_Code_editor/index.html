@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CodeGarden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">WebDever <i class="far fa-caret-square-right"></i></div>
+        <div class="header__group">
+            <button class="header__group-buttons header__group-buttons--active" id="html">HTML</button>
+            <button class="header__group-buttons" id="css">CSS</button>
+            <button class="header__group-buttons" id="js">JS</button>
+            <button class="header__group-buttons header__group-buttons--active" id="output">Output</button>
+            <button class="header__group-buttons header__group-buttons--play" id="runjs"><i class="fas fa-play"></i>
+                &nbsp; Run</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <textarea name="html" class="main__textarea" id="main-html" spellcheck="false"><h1>Hello, WebDever</h1></textarea>
+        <textarea name="html" class="main__textarea main__textarea-hidden" id="main-css" spellcheck="false">h1{color:#3b2c85;}
+        </textarea>
+        <textarea name="html" class="main__textarea main__textarea-hidden" id="main-js" spellcheck="false">console.log('hello');</textarea>
+        <iframe class="main__iframe" id="main-output"></iframe>
+    </main>
+
+    <navbar class="navbar">
+        <p>© 2023 | All rights reserved.</p>
+    </navbar>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
